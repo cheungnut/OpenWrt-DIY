@@ -14,9 +14,9 @@
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
 # 清除旧版argon主题并拉取最新版
-pushd ../package/lean
-rm -rf luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon luci-theme-argon
+# pushd ../package/lean
+# rm -rf luci-theme-argon
+# git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon luci-theme-argon
 
 # 更改主题
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ../feeds/luci/collections/luci/Makefile
