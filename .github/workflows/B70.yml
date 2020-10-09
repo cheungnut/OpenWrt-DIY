@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build HiWiFi B70 OpenWrt
+name: Build r3g OpenWrt
 
 on:
   repository_dispatch:
@@ -18,7 +18,7 @@ on:
     branches:
       - main
     paths:
-      - 'config/B70.config'
+      - 'config/delargon-r3g.config'
   schedule:
     - cron: 0 4 * * 5
 #  watch:
@@ -28,7 +28,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: config/B70.config
+  CONFIG_FILE: config/delargon-r3g.config
   DIY_P1_SH: scripts/diy-part1.sh
   DIY_P2_SH: scripts/diy-part2.sh
   SSH_ACTIONS: false
